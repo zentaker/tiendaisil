@@ -1,0 +1,27 @@
+<section id="paises" class="padded">
+    <div class="container">
+        <h2>Países</h2>
+        <table class="table table-striped table-hover">
+            <thead>
+                <tr>
+                    <th>Código</th>
+                    <th>País</th>
+                    <th>Capital</th>
+                    <th>Subregión</th>
+                    <th class="text-end">Población</th>
+                    <th class="text-end">Area</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let filapais of listaPaises" [routerLink]="['/paisdetalle', filapais.alpha3Code]">
+                    <td>{{filapais.alpha3Code}}</td>
+                    <td>{{filapais.name}}</td>
+                    <td>{{filapais.capital}}</td>
+                    <td>{{filapais.subregion}}</td>
+                    <td class="text-end">{{filapais.population}}</td>
+                    <td class="text-end">{{filapais.area}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</section>
