@@ -5,5 +5,7 @@ export class Pais{
     subregion: string;
     population: number;
     area: number;
-    altSpellings: [];
+    altSpellings: string[];
+    regionalBlocs: string[];
+    flag: string;
 }

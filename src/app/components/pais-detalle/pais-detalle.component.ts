@@ -18,6 +18,10 @@ export class PaisDetalleComponent implements OnInit {
 
     const id = this.activatedroute.snapshot.paramMap.get('id');
 
+    if (id !== null) {
+      
+    }
+
     this.paiservice.paisdatos(id).subscribe((resp: Pais) => {
       this.pais = resp;
       console.log(this.pais)
